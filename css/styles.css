@@ -1,0 +1,63 @@
+.screen{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-99;
+}
+
+.s_box{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:40%;
+}
+.s_box .ct_box{
+  position:absolute;
+  width:100%;
+  bottom:0;
+}
+.s_box .ct_box .logo_box{
+  width:100%;
+  text-align:center;
+}
+.s_box .ct_box .logo_box img{
+  width:80px;
+  height:80px;
+  margin:0 auto 0 auto;
+}
+.search_input{
+  margin:0;
+  padding:0 10px 0 10px;
+}
+.search_button{
+  width:100%;
+  text-align:center;
+}
+.c_box{
+  position:absolute;
+  top:40%;
+  width:100%;
+  padding-top:15px;
+}
+.w_block{
+  width:100%;
+  height:80px;
+  text-align:center;
+}
+.w_block .block_pic{
+  margin:0 auto 2px auto;
+  width:50px;
+  height:50px;
+}
+.w_block .block_pic img{
+  width:50px;
+  height:50px;
+}
+.w_block .block_txt{
+  width:100%;
+  text-align:center;
+  color:#000;
+}

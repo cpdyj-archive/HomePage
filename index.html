@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script>
+	  function euri(){
+	    var s=encodeURI(document.getElementById('sea').value);
+		s=s.replace(/\#/g,'%23');
+		s=s.replace(/\+/g,'%2B');
+		return s;
+	  }
+	  function bd_s(){
+	  document.location='https://www.baidu.com/s?wd='+euri();
+	  }
+	  function gg_s(){
+	  document.location='https://www.google.com/search?q='+euri();
+	  }
+	</script>
+	<script src="config.js"></script>
+	<script src="js/mdui.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+	<link href="css/mdui.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+	<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1; user-scalable=no;">
+  </head>
+  <body>
+	<div class="screen"></div>
+	<div class="s_box">
+	  <div class="ct_box">
+		<div class="logo_box"><img src="img/homelogo.svg" ></div>
+		<div class="search_input">
+		  <div class="mdui-textfield mdui-textfield-floating-label">
+			<label class="mdui-textfield-label">Search</label>
+			<input id="sea" class="mdui-textfield-input" type="text"/>
+		  </div>
+		</div>
+		<div class="search_button">
+		  <button onclick="bd_s()" class="mdui-btn mdui-btn-raised mdui-ripple">百度搜索</button>
+		  <button onclick="gg_s()" class="mdui-btn mdui-btn-raised mdui-ripple">谷歌搜索</button>
+		</div>
+	  </div>
+	</div>
+	<div class="c_box">
+	  <div class="mdui-container" id="website_block">
+		<!-- block start-->
+		  <a href="url">
+			<div class="mdui-col-xs-3 mdui-ripple">
+		  <div class="w_block">
+			<div class="block_pic"><img src="" /></div>
+			<div class="block_txt">title</div>
+		  </div>
+		</div>
+		  </a>
+		<!-- block start-->
+	  </div>
+	</div>
+  </body>
+  <script>
+	var wbe=document.getElementById("website_block");
+	
+	function initWebsiteBlock(){
+	  var str="";
+	  for(var i=0;i<websites.length;i++){
+	    var a=websites[i];
+	    str+=getBlockString(a.title,a.url,a.img);
+	  }
+	  wbe.innerHTML=str;
+	}
+	function getBlockString(title,url,img){
+	  var str="<a href=\"";
+	  str+=url;
+	  str+="\"><div class=\"mdui-col-xs-3 mdui-ripple\"><div class=\"w_block\"><div class=\"block_pic\"><img src=\"";
+	  str+=img;
+	  str+="\"/></div><div class=\"block_txt\">";
+	  str+=title;
+	  str+="</div></div></div></a>";
+	  return str;
+	}
+	try{
+	if(debug){
+	  alert("Number of sites:"+websites.length);
+	}
+	initWebsiteBlock();
+	}catch(e){
+	alert(e);
+	}
+  </script>
+</html>		
