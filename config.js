@@ -7,4 +7,5 @@ var websites=[
 	{title:"DigitalOcean",url:"http://digitalocean.com",img:"img/digitalocean.png"},
 	{title:"Dnspod",url:"http://dnspod.cn",img:"img/dnspod.ico"},
 	{title:"Gitter",url:"https://gitter.im",img:"img/gitter.png"},
+	{title:"Nextcloud",url:"https://ss.yiji.cf/nextcloud",img:"img/nextcloud.ico"},
 	];
